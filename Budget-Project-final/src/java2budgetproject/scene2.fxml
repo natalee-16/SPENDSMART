@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #9e20a0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane id="pane2" fx:id="pane2" alignment="CENTER" hgap="5.0" prefHeight="400.0" prefWidth="600.0" vgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.66668701171875" minWidth="10.0" prefWidth="104.99998982747394" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="343.6666463216145" minWidth="10.0" prefWidth="343.6666463216145" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="105.33331298828125" minWidth="10.0" prefWidth="81.00002034505212" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="92.66666285196939" minHeight="10.0" prefHeight="26.666681925455727" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="107.33332316080728" minHeight="10.0" prefHeight="56.000012715657554" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="111.33332061767578" minHeight="10.0" prefHeight="46.66667683919272" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="143.33334350585938" minHeight="10.0" prefHeight="68.66668192545569" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="111.99998474121094" minHeight="10.0" prefHeight="62.33331298828122" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="81.66668701171875" minHeight="10.0" prefHeight="81.66668701171875" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="currentuser" text="User's name" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnlogout" mnemonicParsing="false" onAction="#exit" text="Logout" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnupload" mnemonicParsing="false" onAction="#upload" text="+Upload Expense Files (.csv)" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btncalculate" mnemonicParsing="false" onAction="#btnShowResult" prefHeight="50.0" prefWidth="319.0" text="Calculate and Show My Balance " textFill="#ff00cc" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAddFunds" mnemonicParsing="false" onAction="#addfund" text="Add" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="currentBalance" nodeOrientation="LEFT_TO_RIGHT" text="Current Balance: $ " textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="addfunds" alignment="CENTER" text="Add Funds: " textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtfunds" prefHeight="47.0" prefWidth="272.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="lblmessage" textFill="#ebebeb" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label fx:id="lblbalance" prefHeight="30.0" prefWidth="183.0" textAlignment="RIGHT" textFill="#f8f8f8" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Logged in as:" textFill="WHITE" GridPane.halignment="RIGHT">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+         </padding>
+      </GridPane>
+   </children>
+</AnchorPane>
